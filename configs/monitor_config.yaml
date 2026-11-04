@@ -1,0 +1,18 @@
+capture:
+  default_mode: "pcap_replay" # live | pcap_replay
+  interface: "" # set via command line or env
+  promiscuous: true
+  bpf_filter: "ip or ip6"
+  flow_active_timeout: 120
+  flow_idle_timeout: 5
+  batch_size: 32
+  batch_timeout_ms: 50
+
+queue:
+  max_size: 10000
+
+whitelist:
+  enabled: true
+  ips:
+    - "127.0.0.1"
+    - "::1"

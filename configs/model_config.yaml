@@ -1,0 +1,50 @@
+models_dir: "ml_engine/models"
+schema_path: "ml_engine/feature_schema.json"
+
+classifiers:
+  random_forest:
+    n_estimators: 100
+    max_depth: 20
+    min_samples_split: 5
+    n_jobs: -1
+    random_state: 42
+  xgboost:
+    n_estimators: 150
+    max_depth: 8
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+    tree_method: "hist"
+    random_state: 42
+  lightgbm:
+    n_estimators: 150
+    max_depth: -1
+    num_leaves: 63
+    learning_rate: 0.1
+    random_state: 42
+  mlp:
+    hidden_layers: [128, 64, 32]
+    dropout: 0.2
+    learning_rate: 0.001
+    epochs: 20
+    batch_size: 256
+
+anomaly_detector:
+  type: "isolation_forest" # isolation_forest | autoencoder
+  contamination: 0.01
+  n_estimators: 100
+  random_state: 42
+
+decision_engine:
+  supervised_confidence_threshold: 0.80
+  anomaly_score_threshold: 0.70
+  deduplication_window_seconds: 10
+  severity_mapping:
+    DDoS: "Critical"
+    DoS: "High"
+    Botnet: "High"
+    BruteForce: "High"
+    WebAttack: "Medium"
+    PortScan: "Medium"
+    Anomaly: "Medium"
+    Benign: "Low"

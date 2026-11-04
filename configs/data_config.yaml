@@ -1,0 +1,39 @@
+raw_data_dir: "dataset/raw"
+processed_data_dir: "dataset/processed"
+results_dir: "results"
+
+datasets:
+  cicids2017:
+    enabled: true
+    source_url: "https://www.unb.ca/cic/datasets/ids-2017.html"
+    raw_files:
+      - "Monday-WorkingHours.pcap_ISCX.csv"
+      - "Tuesday-WorkingHours.pcap_ISCX.csv"
+      - "Wednesday-workingHours.pcap_ISCX.csv"
+      - "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv"
+      - "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv"
+      - "Friday-WorkingHours-Morning.pcap_ISCX.csv"
+      - "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv"
+      - "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv"
+  unsw_nb15:
+    enabled: false
+    source_url: "https://research.unsw.edu.au/projects/unsw-nb15-dataset"
+
+split_strategy:
+  type: "time_based_or_stratified"
+  train_ratio: 0.70
+  val_ratio: 0.15
+  test_ratio: 0.15
+  random_seed: 42
+  stratify_by: "label"
+
+preprocessing:
+  drop_identifiers:
+    - "Flow ID"
+    - "Source IP"
+    - "Destination IP"
+    - "Timestamp"
+    - "External IP"
+  correlation_threshold: 0.95
+  variance_threshold: 0.0
+  imbalance_technique: "class_weights" # class_weights | smote | undersampling
