@@ -13,8 +13,8 @@
 
 ### 2.1 Clone and Environment Setup
 ```bash
-git clone https://github.com/hiteshmore3636/AI-NIDS.git
-cd AI-NIDS
+git clone https://github.com/hiteshmore3636/AI_NIDS_Project.git
+cd AI_NIDS_Project
 
 # Create and activate Python virtual environment
 python -m venv venv

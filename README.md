@@ -70,8 +70,8 @@ This project follows a structured GitFlow branching model:
 ### Setup Instructions
 ```bash
 # 1. Clone repository
-git clone https://github.com/hiteshmore3636/AI-NIDS.git
-cd AI-NIDS
+git clone https://github.com/hiteshmore3636/AI_NIDS_Project.git
+cd AI_NIDS_Project
 
 # 2. Virtual environment
 python -m venv venv
@@ -97,6 +97,6 @@ pytest -v tests/
 
 To link your local repository to your GitHub remote, run:
 ```bash
-git remote add origin https://github.com/hiteshmore3636/AI-NIDS.git
+git remote add origin https://github.com/hiteshmore3636/AI_NIDS_Project.git
 git push -u origin main
 ```
