@@ -1,0 +1,12 @@
+% Feature ablation study results
+\begin{tabular}{lcccc}
+\hline
+Feature Subset & Features & Accuracy & Macro-F1 & Latency (ms) \\
+\hline
+All Features (24) & 24 & 98.23\% & 0.9469 & 49.495 ms \\
+Top-10 Features & 10 & 98.64\% & 0.9540 & 41.016 ms \\
+IAT & Rates Only & 7 & 91.02\% & 0.7972 & 45.208 ms \\
+Packet Lengths Only & 8 & 95.37\% & 0.8725 & 52.108 ms \\
+Flags & Windows Only & 8 & 72.38\% & 0.6124 & 47.788 ms \\
+\hline
+\end{tabular}

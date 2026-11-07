@@ -57,6 +57,7 @@ ml_engine/models/*
 # Results & Logs
 logs/
 *.log
+!results/*.csv
 
 # Node & Frontend
 node_modules/
