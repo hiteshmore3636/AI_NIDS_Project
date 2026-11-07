@@ -25,7 +25,7 @@ The project enforces test-driven development and empirical evaluation across fou
 |---|---|---|---|---|
 | **Phase 0** | `tests/test_environment.py` | Configs, schemas, environment imports | PASSED (4/4) | 2026-11-05 |
 | **Phase 1** | `tests/test_preprocessing.py`| Data cleaning, zero-leakage partitions | PASSED (6/6) | 2026-11-07 |
-| **Phase 2** | `tests/test_models.py` | Supervised baseline models, schema checks| Pending | - |
+| **Phase 2** | `tests/test_models.py` | Supervised baseline models, schema checks| PASSED (5/5) | 2026-11-08 |
 | **Phase 3** | `tests/test_experiments.py` | Anomaly baselines, calibration, ablation | Pending | - |
 | **Phase 4** | `tests/test_explainability.py`| SHAP attribution consistency | Pending | - |
 | **Phase 5** | `tests/test_pipeline.py` | Flow extractor, feature parity, latency | Pending | - |
