@@ -1,0 +1,88 @@
+{
+  "sanitization": {
+    "initial_rows": 5000,
+    "deduplicated_rows": 4900,
+    "duplicates_removed": 100,
+    "inf_values_found": 58
+  },
+  "split": {
+    "strategy": "Stratified Zero-Leakage Split",
+    "random_seed": 42,
+    "train_count": 3430,
+    "val_count": 735,
+    "test_count": 735
+  },
+  "class_distributions": {
+    "train": {
+      "BENIGN": 2199,
+      "DoS": 513,
+      "DDoS": 254,
+      "PortScan": 218,
+      "BruteForce": 139,
+      "WebAttack": 70,
+      "Botnet": 37
+    },
+    "val": {
+      "BENIGN": 471,
+      "DoS": 110,
+      "DDoS": 54,
+      "PortScan": 47,
+      "BruteForce": 30,
+      "WebAttack": 15,
+      "Botnet": 8
+    },
+    "test": {
+      "BENIGN": 471,
+      "DoS": 110,
+      "DDoS": 55,
+      "PortScan": 46,
+      "BruteForce": 30,
+      "WebAttack": 15,
+      "Botnet": 8
+    }
+  },
+  "features": {
+    "initial_feature_count": 29,
+    "selected_feature_count": 24,
+    "pruned_features": [
+      "pkt_len_std",
+      "iat_max_ms",
+      "fwd_iat_total_ms",
+      "tcp_urg_count",
+      "protocol"
+    ],
+    "selected_features": [
+      "destination_port",
+      "flow_duration_ms",
+      "fwd_packets",
+      "bwd_packets",
+      "fwd_bytes",
+      "bwd_bytes",
+      "pkt_len_min",
+      "pkt_len_max",
+      "pkt_len_mean",
+      "flow_bytes_per_sec",
+      "flow_packets_per_sec",
+      "iat_mean_ms",
+      "iat_std_ms",
+      "iat_min_ms",
+      "bwd_iat_total_ms",
+      "tcp_syn_count",
+      "tcp_fin_count",
+      "tcp_rst_count",
+      "tcp_psh_count",
+      "tcp_ack_count",
+      "init_win_bytes_fwd",
+      "init_win_bytes_bwd",
+      "active_mean_ms",
+      "idle_mean_ms"
+    ]
+  },
+  "artifacts": {
+    "train_parquet": "C:\\Users\\hites\\OneDrive\\Desktop\\AI Network project\\dataset\\processed\\train.parquet",
+    "val_parquet": "C:\\Users\\hites\\OneDrive\\Desktop\\AI Network project\\dataset\\processed\\val.parquet",
+    "test_parquet": "C:\\Users\\hites\\OneDrive\\Desktop\\AI Network project\\dataset\\processed\\test.parquet",
+    "scaler_joblib": "C:\\Users\\hites\\OneDrive\\Desktop\\AI Network project\\ml_engine\\models\\scaler.joblib",
+    "features_json": "C:\\Users\\hites\\OneDrive\\Desktop\\AI Network project\\ml_engine\\models\\features.json"
+  }
+}

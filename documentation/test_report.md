@@ -23,8 +23,8 @@ The project enforces test-driven development and empirical evaluation across fou
 
 | Phase | Test Suite | Target Component | Status | Last Run Date |
 |---|---|---|---|---|
-| **Phase 0** | `tests/test_environment.py` | Configs, schemas, environment imports | Initialized | Pending |
-| **Phase 1** | `tests/test_preprocessing.py`| Data cleaning, zero-leakage partitions | Pending | - |
+| **Phase 0** | `tests/test_environment.py` | Configs, schemas, environment imports | PASSED (4/4) | 2026-11-05 |
+| **Phase 1** | `tests/test_preprocessing.py`| Data cleaning, zero-leakage partitions | PASSED (6/6) | 2026-11-07 |
 | **Phase 2** | `tests/test_models.py` | Supervised baseline models, schema checks| Pending | - |
 | **Phase 3** | `tests/test_experiments.py` | Anomaly baselines, calibration, ablation | Pending | - |
 | **Phase 4** | `tests/test_explainability.py`| SHAP attribution consistency | Pending | - |
